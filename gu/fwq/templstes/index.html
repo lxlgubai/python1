@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顾佰实验项目</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/jquery.js"></script>
+</head>
+<body>
+    <div class="topleft">
+        <h2>顾佰实验项目</h2>
+        <ul>
+            <li class="topleftli1">查询<p style="display: block;"></p></li>
+            <li class="topleftli2">增加<p></p></li>
+            <li class="topleftli3">修改<p></p></li>
+            <li class="topleftli4">删除<p></p></li>
+        </ul>
+    </div>
+    <!---------------- 用户数据查询 ------------------->
+    <div class="topright1">
+        <h1>用户数据查询</h1>
+        <div class="topright1_search">
+            <div class="topright1_search1">
+                <span>搜索：</span>
+                <input type="text" placeholder="用户名搜索">
+                <button>搜索</button>
+            </div>
+            <div class="topright1_search1">
+                <span>搜索：</span>
+                <input type="text"placeholder="号码搜索">
+                <button>搜索</button>
+            </div>
+            <div class="topright1_search1">
+                <span>搜索：</span>
+                <input type="text" placeholder="邮箱搜索">
+                <button>搜索</button>
+            </div>
+        </div>
+        <div class="topright1_tab">
+            <table>
+                <tr>
+                    <td style="width: 8px;">ID</td>
+                    <td>用户名</td>
+                    <td>年龄</td>
+                    <td>性别</td>
+                    <td>密码</td>
+                    <td>号码</td>
+                    <td>地址</td>
+                    <td>邮箱</td>
+                    <td>注册时间</td>
+                </tr>
+                {% for temp in show_list%}
+                <tr>
+                    <td style="width: 8px;">{{temp[0]}}</td>
+                    <td>{{temp[1]}}</td>
+                     <td>{{temp[2]}}</td>
+                    <td>{{temp[3]}}</td>
+                    <td>{{temp[4]}}</td>
+                     <td>{{temp[5]}}</td>
+                    <td>{{temp[6]}}</td>
+                    <td>{{temp[7]}}</td>
+                    <td>{{temp[8]}}</td>
+                </tr>  
+                {% end%}
+            </table>
+        </div>
+        <div class="text">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>....</li>
+            </ul>
+            <!-- <p>更多</p> -->
+        </div>
+    </div>
+    <!---------------- 用户数据增加 ------------------->
+    <div class="topright2">
+        <h1>用户数据添加</h1>
+        <div class="addlist">
+            <form action="Javascript:">
+                <ul>
+                    <li><p>请输入名字：</p><input type="text" name="usename"></li>
+                    <li><p>年龄：</p><input type="text"></li>
+                    <li><p>男</p><input type="checkbox" name="男"><p>女</p><input type="checkbox" name="女"></li>
+                    <li><p>请输入密码：</p><input type="password"></li>
+                    <li><p>号码：</p><input type="tel"></li>
+                    <li><p>地址：</p><input type="text"></li>
+                    <li><p>邮箱：</p><input type="email"></li>
+                    <li><p>时间：</p><input type="datetime-local"></li>
+                    <li><button>添加</button></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <!---------------- 用户数据修改 ------------------->
+    <div class="topright3">
+        
+    </div>
+    <!---------------- 用户数据删除 ------------------->
+    <div class="topright4">
+        
+    </div>
+    
+    <!------------------ JavaScript放置 ----------------->
+    <script src="../static/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+
+# 成功userid以字母开头
+- add_remenber:
+    userid: "ojbk0123_-@.001"
+    name: "ojbk001"
+    mobile: "13118170001"
+    department: [1]
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 成功userid以数字开头
+- add_remenber:
+    userid: "77ojbk0123_-@.002"
+    name: "ojbk002"
+    mobile: "13118170002"
+    department: [1]
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，email，department。
+- add_remenber:
+    userid: "ojbk0123_-@.003"
+    name: "ojbk003"
+    email: "1230001@qq.com"
+    department: [1]
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+
+# 请求数据只传入正确的userid，name，mobile，department。且关联多个部门
+- add_remenber:
+    userid: "ojbk0123_-@.004"
+    name: "ojbk004"
+    mobile: "13118170004"
+    department: [1,2]
+  add_department:
+    name: "ojbk004"
+    parentid: 1
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,alias
+- add_remenber:
+    userid: "ojbk0123_-@005"
+    name: "ojbk005"
+    mobile: "13118170005"
+    department: [1]
+    alias: "ojbk005"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,order。
+- add_remenber:
+    userid: "ojbk0123_-@006"
+    name: "ojbk006"
+    mobile: "13118170006"
+    department: [1]
+    order: 1
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,position。
+- add_remenber:
+    userid: "ojbk0123_-@007"
+    name: "ojbk007"
+    mobile: "13118170007"
+    department: [1]
+    position: "产品经理"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,gender。
+- add_remenber:
+    userid: "ojbk0123_-@008"
+    name: "ojbk008"
+    mobile: "13118170008"
+    department: [1]
+    gender: 1
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,gender
+- add_remenber:
+    userid: "ojbk0123_-@009"
+    name: "ojbk009"
+    mobile: "13118170009"
+    department: [1]
+    gender: 2
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,email。
+- add_remenber:
+    userid: "ojbk0123_-@010"
+    name: "ojbk010"
+    mobile: "13118170010"
+    department: [1]
+    email: "123010@qq.com"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,telephone。
+- add_remenber:
+    userid: "ojbk0123_-@011"
+    name: "ojbk011"
+    mobile: "13118170011"
+    department: [1]
+    telephone: "0519-000011"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,is_leader_in_dept。
+- add_remenber:
+    userid: "ojbk0123_-@012"
+    name: "ojbk012"
+    mobile: "13118170012"
+    department: [1]
+    is_leader_in_dept: 0
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,is_leader_in_dept。
+- add_remenber:
+    userid: "ojbk0123_-@.013"
+    name: "ojbk013"
+    mobile: "13118170013"
+    department: [1]
+    is_leader_in_dept: 1
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,avatar_mediaid。
+- add_remenber:
+    userid: "ojbk0123_-@014"
+    name: "ojbk014"
+    mobile: "13118170014"
+    department: [1]
+  up_images:
+    filename: my_wework.png
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,enable。
+- add_remenber:
+    userid: "ojbk0123_-@015"
+    name: "ojbk015"
+    mobile: "13118170015"
+    department: [1]
+    enable: 0
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,enable
+- add_remenber:
+    userid: "ojbk0123_-@016"
+    name: "ojbk016"
+    mobile: "13118170016"
+    department: [1]
+    enable: 1
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,external_position。
+- add_remenber:
+    userid: "ojbk0123_-@.017"
+    name: "ojbk017"
+    mobile: "13118170017"
+    department: [1]
+    external_position: "项目经理"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,external_position,positionv。
+- add_remenber:
+    userid: "ojbk0123_-@.018"
+    name: "ojbk018"
+    mobile: "13118170018"
+    department: [1]
+    external_position: "项目经理"
+    position: "产品经理"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+# 请求数据只传入正确的userid，name，mobile，department,address
+- add_remenber:
+    userid: "ojbk0123_-@.019"
+    name: "ojbk019"
+    mobile: "13118170019"
+    department: [1]
+    address: "四川省南充市营山县"
+  expect:
+    errcode: 0
+    errmsg: "created"
+
+
+
+# userid包含其他字符。
+- add_remenber:
+    userid: "ojbk0123_-@.##020"
+    name: "ojbk020"
+    mobile: "13118170020"
+    department: [1]
+  expect:
+    errcode: 40003
+
+# userid以特殊字符开头
+- add_remenber:
+    userid: "@ojbk0123_-@.021"
+    name: "ojbk021"
+    mobile: "13118170021"
+    department: [1]
+  expect:
+    errcode: 40003
+
+# userid为超长字符
+- add_remenber:
+    userid: "@ojbk0123_-@.022000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    name: "ojbk022"
+    mobile: "13118170022"
+    department: [1]
+  expect:
+    errcode: 40058
+
+# userid为空
+- add_remenber:
+    name: "ojbk023"
+    mobile: "13118170023"
+    department: [1]
+  expect:
+    errcode: 41009
+
+# name为空
+- add_remenber:
+    userid: "ojbk0123_-@.024"
+    mobile: "13118170024"
+    department: [1]
+  expect:
+    errcode: 60112
+
+# mobile和email同时为空
+- add_remenber:
+    userid: "ojbk0123_-@.025"
+    name: "ojbk025"
+    department: [1]
+  expect:
+    errcode: 60129
+
+# department为空
+- add_remenber:
+    userid: "ojbk0123_-@.026"
+    name: "ojbk026"
+    mobile: "13118170026"
+  expect:
+    errcode: 40066
+
+# department为不存在的部门id
+- add_remenber:
+    userid: "ojbk0123_-@.027"
+    name: "ojbk027"
+    mobile: "13118170027"
+    department: [5]
+  expect:
+    errcode: 40066
+
+# mobile为错误的手机格式（13位）
+- add_remenber:
+    userid: "ojbk0123_-@.029"
+    name: "ojbk029"
+    mobile: "1311812700029"
+    department: [1]
+  expect:
+    errcode: 0
+
+# mobile为错误的手机格式（10位）
+- add_remenber:
+    userid: "ojbk0123_-@.030"
+    name: "ojbk030"
+    mobile: "1311817030"
+    department: [1]
+  expect:
+    errcode: 60103
+
+# email为错误的邮箱格式
+- add_remenber:
+    userid: "ojbk0123_-@.031"
+    name: "ojbk031"
+    mobile: "13118170031"
+    department: [1]
+    email: "123000@"
+  expect:
+    errcode: 60105
+
+# 重复的userid
+- add_remenber:
+    userid: "ojbk0123_-@.032"
+    name: "ojbk032"
+    mobile: "13118170032"
+    department: [1]
+  re_add_remenber:
+    userid: "ojbk0123_-@.032"
+    name: "ojbk0321"
+    mobile: "13118170055"
+    department: [1]
+  expect:
+    errcode: 60102
+
+# 重复的mobile
+- add_remenber:
+    userid: "ojbk0123_-@.033"
+    name: "ojbk033"
+    mobile: "13118170033"
+    department: [1]
+  re_add_remenber:
+    userid: "ojbk0123_-@.0331"
+    name: "ojbk0331"
+    mobile: "13118170033"
+    department: [1]
+  expect:
+    errcode: 60104
+
+# 重复的email
+- add_remenber:
+    userid: "ojbk0123_-@.034"
+    name: "ojbk034"
+    mobile: "13118170034"
+    department: [1]
+    email: "1230034@qq.com"
+  re_add_remenber:
+    userid: "ojbk0123_-@.0341"
+    name: "ojbk0341"
+    mobile: "13118170088"
+    department: [1]
+    email: "1230034@qq.com"
+  expect:
+    errcode: 60106
